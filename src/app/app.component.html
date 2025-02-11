@@ -1,0 +1,85 @@
+<!--
+{{n}}
+<a [href]="url">Google</a>
+
+<img [src]="pathimage" [width]="wimg" [height]="himg">
+
+
+<ul class="list-unstyled">
+  <li>{{products.id}}</li>
+  <li>{{products.name}}</li>
+  <li>{{products.price}}</li>
+</ul>
+
+<div class="row">
+  <div class="col">
+    <input type="text" [(ngModel)]="title">
+    <input type="checkbox" [(ngModel)]="ch">
+  </div>
+  <div class="col">
+    {{title}}
+    {{ch}}
+  </div>
+</div>
+-->
+
+
+
+<!--Practice 14-->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <label for="" class="form-label">Height</label>
+      <input type="range" min="1" max="1000" [(ngModel)]="himg">
+    </div>
+    <div class="col">
+      <label for="" class="form-label">Width</label>
+      <input type="range" min="1" max="1000" [(ngModel)]="wimg">    
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-2">
+      {{wimg}}-Width
+    </div>
+    <div class="col-sm-2">
+      {{himg}}-Height
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col">
+      <img src="/img/corolla.png" alt="" [width]="wimg" [height]="himg">
+    </div>
+  </div>
+
+
+
+
+  
+  <div class="row">
+    <div class="col">
+      <label for="" class="form-label">Enter First Integer:</label>
+      <input type="text" [(ngModel)]="x">    
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="" class="form-label">Enter Second Integer:</label>
+      <input type="text" [(ngModel)]="y">    
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-info" (click)="add()">Add</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <label for="" class="form-label">Result: </label>
+      {{z}}
+    </div>
+  </div>
+</div>
